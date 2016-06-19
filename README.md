@@ -11,7 +11,7 @@ Based on UMG, blueprint only. It's free to use, even commercially.
 * Easy to extend.
 * Promote good practices.
 
-## Dependencies
+### Dependencies
 * Free Blueprint plug-in [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
 
 ### Third-party assets used in sample project
