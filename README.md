@@ -8,7 +8,7 @@ Based on UMG, blueprint only. It's free to use, even commercially.
 * UI Manager provides panel management: creating and switching panels, opening panels in hierarchy, handling input, basic navigation, activating chosen widget in panel, receiving inputs frm active widget. So you don't have to script basic widget actions in your panels. Focus on designing it and scripting advanced/custom functions. 
 * Typical UI composites are UMG widgets provided with script which handles basic logic and input for you.
 * Samples of Main/Options menus simplifies creating your own menus, i.e. Video Menu allows you to set common graphics options. Just customize it to your needs. Or just download it, don't change a thing and enjoy basic menus working in your cooked build. It's useful for playtesting prototypes.
-* You don't have to reinvent the entire wheel.
+* You don't have to reinvent the wheel when you're starting work on UI. I already did it.
 
 ### Take a look!
 This is entire script for Pause Menu, as simple as it always should be.
