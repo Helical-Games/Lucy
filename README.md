@@ -5,7 +5,7 @@ Based on UMG, blueprint only. It's free to use, even commercially.
 
 ### What's inside?
 * Input Manager provides basic functionalities: setting various inputs for single action, activating interactions, detecting input device and automatically updating displayed icon and key of interaction.
-* UI Manager provides panel management: creating and switching panels, opening panels in hierarchy, handling input, basic navigation, activating chosen widget in panel, receiving inputs frm active widget. So you don't have to script basic widget actions in your panels. Focus on designing it and scripting advanced/custom functions. 
+* UI Manager provides panel management: creating and switching panels, opening panels in hierarchy, handling input, basic navigation, activating chosen widget in panel, receiving input from active widget. So you don't have to script basic widget actions in your panels. Focus on designing it and scripting advanced/custom functions. 
 * Typical UI composites are UMG widgets provided with script which handles basic logic and input for you.
 * Samples of Main/Options menus simplifies creating your own menus, i.e. Video Menu allows you to set common graphics options. Just customize it to your needs. Or just download it, don't change a thing and enjoy basic menus working in your cooked build. It's useful for playtesting prototypes.
 * You don't have to reinvent the wheel when you're starting work on UI. I already did it.
@@ -29,4 +29,5 @@ You don't need to produce spaghetti blueprint for every Text or Slider element. 
 ### Third-party assets used in sample project
 * Controller icons created by [Xelu](http://opengameart.org/content/free-keyboard-and-controllers-prompts-pack).
 * Miscellaneous icons from  [To [icon]](http://www.toicon.com/about) project.
+* Chopin's Nocturne performed by Frank Levy. More at [Musopen.org](https://musopen.org/music/245/frederic-chopin/nocturnes-op-9/).
 
