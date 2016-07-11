@@ -23,6 +23,11 @@ You don't need to produce spaghetti blueprint for every Text or Slider element. 
 
 ![ALT](https://i.imgur.com/O1xuOXU.png "Params")
 
+### All links you need
+* [Wiki: Getting Started](https://github.com/kjustynski/Lucy/wiki/Getting-Started)
+* [Trello Board](https://trello.com/b/p4HZ0RuB/lucy)
+* [Twitter](https://twitter.com/kjustynski)
+
 ### Dependencies
 * Free Blueprint plug-in [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
 
