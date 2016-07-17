@@ -1,11 +1,11 @@
-# Lucy
-
-Lightweight UI & Input framework for projects created in Unreal Engine 4. 
-Based on UMG, blueprint only. It's free to use, even commercially.
+Lucy is lightweight UI & Input framework for projects created in Unreal Engine 4. 
+* Based on UMG, blueprint only. It's free to use, even commercially.
+* It takes different approach on compositing user interfaces in UE4. In clean UMG (without any own scripts) you have to script every element (like button, text or slider) individually. It means lots of copy-pasting scripts responsible for input, localization, styling, setting and restoring state. Everything. Of course many developers close part of those scripts in reusable functions and apply them at every element. My approach is to close entire functionality of element or element group in separate widget file, then simply put this widget in UI panel and fill up parameters. Element added in UMG's Designer tab works out of the box. 
+* And I added to it easy way to manage UI panels and input (not only UI related) in game :)
 
 ### What's inside?
 * Input Manager provides basic functionalities: setting various inputs for single action, activating interactions, detecting input device and automatically updating displayed icon and key of interaction.
-* UI Manager provides panel management: creating and switching panels, opening panels in hierarchy, handling input, basic navigation, activating chosen widget in panel, receiving input from active widget. So you don't have to script basic widget actions in your panels. Focus on designing it and scripting custom and advanced functions. 
+* UI Manager takes care of creating and switching panels, opening panels in hierarchy, handling input, basic navigation, activating chosen widget in panel, receiving input from active widget. So you don't have to script basic widget actions in your panels. Focus on designing it and scripting custom and advanced functions. 
 * Typical UI composites are UMG widgets provided with script which handles basic logic and input for you. Every composite automatically updates its default state based on instance value.
 * Samples of Main/Options menus simplifies creating your own menus, i.e. Video Menu allows you to set common graphics options. Just customize it to your needs. Or just download it, don't change a thing and enjoy basic menus working in your cooked build. It's useful for playtesting prototypes.
 * You don't have to reinvent the wheel when you're starting work on UI. I already did it. Partially ;)
