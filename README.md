@@ -19,10 +19,6 @@ You don't need to produce spaghetti blueprint for every Text or Slider element. 
 
 ![ALT](https://i.imgur.com/O1xuOXU.png "Params")
 
-Entire UI could be constructed by using "composites", simple UI elements with script handling input, localization and common operations.
-
-![ALT](https://i.imgur.com/p6jc5MH.png "Label + Slider")
-
 ### All links you need
 * [Wiki: Getting Started](https://github.com/kjustynski/Lucy/wiki/Getting-Started)
 * [Trello Board](https://trello.com/b/p4HZ0RuB/lucy)
