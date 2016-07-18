@@ -24,10 +24,8 @@ You don't need to produce spaghetti blueprint for every Text or Slider element. 
 * [Trello Board](https://trello.com/b/p4HZ0RuB/lucy)
 * [Twitter](https://twitter.com/kjustynski)
 
-### Dependencies
-* Free Blueprint plug-in [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
-
-### Third-party assets used in sample project
+### Third-party 
+* Few blueprint functions from [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
 * Controller icons created by [Xelu](http://opengameart.org/content/free-keyboard-and-controllers-prompts-pack).
 * Miscellaneous icons from  [To [icon]](http://www.toicon.com/about) project.
 * Chopin's Nocturne performed by Frank Levy. More at [Musopen.org](https://musopen.org/music/245/frederic-chopin/nocturnes-op-9/).
