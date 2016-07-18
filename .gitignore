@@ -1,4 +1,7 @@
+/.vs
 /Binaries
+/Build/WindowsNoEditor
 /Intermediate
+/Plugins/LucyLibrary/Intermediate
 /Saved
 /WindowsNoEditor
