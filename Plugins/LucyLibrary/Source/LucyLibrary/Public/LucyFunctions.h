@@ -29,4 +29,182 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "LucyLibrary sample test testing"), Category = "LucyLibraryTesting")
 	static float LucyLibrarySampleFunction(float Param);
+
+	/**
+	* Sets the volume of a Sound Class.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Set Volume"))
+		static void SoundClass_SetVolume(USoundClass* SoundClass, const float Volume);
+
+	/**
+	* Returns the volume of a Sound Class.
+	*/
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Get Volume"))
+		static float SoundClass_GetVolume(USoundClass* SoundClass);
+
+	/**
+	* Sets the pitch of a Sound Class.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Set Pitch"))
+		static void SoundClass_SetPitch(USoundClass* SoundClass, const float Pitch);
+
+	/**
+	* Returns the pitch of a Sound Class.
+	*/
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Get Pitch"))
+		static float SoundClass_GetPitch(USoundClass* SoundClass);
+
+	/**
+	* Sets the mouse position.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Position"))
+		static void SetMousePosition(const int32 X, const int32 Y);
+
+	/**
+	* Returns the mouse position.
+	*
+	* Returns Success=false, X=0 and Y=0 if the mouse position could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Viewport is null
+	*  - the mouse is outside of the viewport
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Get Mouse Position"))
+		static void GetMousePosition(bool& Success, int32& X, int32& Y);
+
+	/**
+	* Sets the mouse position in percentages, from 0.0 to 1.0.
+	*
+	* X:  0.0 is left, 1.0 is right
+	* Y:  0.0 is top,  1.0 is bottom
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Position (Percentages)"))
+		static void SetMousePositionInPercentages(const float X, const float Y);
+
+	/**
+	* Returns the mouse position in percentages, from 0.0 to 1.0.
+	*
+	* X:  0.0 is left, 1.0 is right
+	* Y:  0.0 is top,  1.0 is bottom
+	*
+	* Returns Success=false, X=0.0 and Y=0.0 if the mouse position could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Viewport is null
+	*  - the mouse is outside of the viewport
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Get Mouse Position (Percentages)"))
+		static void GetMousePositionInPercentages(bool& Success, float& X, float& Y);
+
+	/**
+	* Sets the mouse locked to the viewport (meaning the mouse cursor won't be able to get out of the viewport).
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Locked To Viewport", Keywords = "cursor confined min max"))
+		static void SetMouseLockedToViewport(const bool Locked);
+
+	/**
+	* Returns the primary monitor resolution.
+	*/
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Monitor", Meta = (DisplayName = "Get Primary Monitor Resolution", Keywords = "screen size desktop"))
+		static void GetPrimaryMonitorResolution(int32& Width, int32& Height);
+
+	/**
+	* Returns the primary monitor work area, this is the area not covered by task bars or other docked widgets.
+	*/
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Monitor", Meta = (DisplayName = "Get Primary Monitor Work Area", Keywords = "screen size desktop"))
+		static void GetPrimaryMonitorWorkArea(int32& X, int32& Y, int32& Width, int32& Height);
+
+	/**
+	* Returns the windows bounds in screen space.
+	*
+	* Returns Success=false, X=0, Y=0, Width=0 and Height=0 if the window bounds could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Window is null
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Bounds", Keywords = "size location position"))
+		static void GetWindowBounds(bool& Success, int32& X, int32& Y, int32& Width, int32& Height);
+
+	/**
+	* Gets the window position in screen space.
+	*
+	* Returns Success=false, X=0 and Y=0 if the window bounds could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Window is null
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Position"))
+		static void GetWindowPosition(bool& Success, int32& X, int32& Y);
+
+	/**
+	* Gets the window size in screen pixels.
+	*
+	* Returns Success=false, Width=0 and Height=0 if the window bounds could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Window is null
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Size"))
+		static void GetWindowSize(bool& Success, int32& Width, int32& Height);
+
+	/**
+	* Gets the window position in screen space in percentages, relative to the primary monitor work area, from 0.0 to 1.0.
+	*
+	* This will take the window size in account, meaning that X=0.5 and Y=0.5 will cause the window to be centered in the primary screen work area.
+	*
+	* Returns Success=false, X=0.0 and Y=0.0 if the window bounds could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Window is null
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Position (Percentages)"))
+		static void GetWindowPositiomInPercentagesCentered(bool& Success, float& X, float& Y);
+
+	/**
+	* Sets the window position in screen space.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Position"))
+		static void SetWindowPosition(const int32 X, const int32 Y);
+
+	/**
+	* Sets the window size in screen pixels.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Size"))
+		static void SetWindowSize(const int32 Width, const int32 Height);
+
+	/**
+	* Sets the window position in screen space in percentages, relative to the primary monitor work area, from 0.0 to 1.0.
+	*
+	* This will take the window size in account, meaning that X=0.5 and Y=0.5 will cause the window to be centered in the primary screen work area.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Position (Percentages)"))
+		static void SetWindowPositiomInPercentagesCentered(const float X, const float Y);
+
+	/**
+	* Returns the window mode.
+	*
+	* If Fullscreen is false then IsFullscreenWindowed will also be false.
+	*
+	* Returns Success=false, Fullscreen=false and Windowed=false if the window mode could not be determined, which happends when:
+	*  - GEngine is null
+	*  - GEngine's GameViewportClient is null
+	*  - GameViewportClient's Window is null
+	*  - The mode is pseudo-fullscreen (used for devices like HMDs)
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Mode", Keywords = "screen fullscreen windowed"))
+		static void GetWindowMode(bool& Success, bool& Fullscreen, bool& IsFullscreenWindowed);
+
+	/**
+	* Sets the window mode.
+	*
+	* If Fullscreen is false, it will be windowed.
+	* If Fullscreen is true and IsFullscreenWindowed is false, it will be fullscreen.
+	* If Fullscreen is true and IsFullscreenWindowed is true, it will be windowed fullscreen.
+	*
+	* IsFullscreenWindowed is only used when Fullscreen is true.
+	*
+	* Fullscreen and Windowed can both be true.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Mode", Keywords = "screen fullscreen windowed"))
+		static void SetWindowMode(const bool Fullscreen, const bool IsFullscreenWindowed);
 };
