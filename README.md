@@ -17,7 +17,7 @@ This is entire script for Pause Menu, as simple as it always should be.
 
 You don't need to produce spaghetti blueprint for every Text or Slider element. Prepare it quickly by setting params.
 
-![ALT](https://i.imgur.com/O1xuOXU.png "Params")
+![ALT](http://i.imgur.com/2e31OQV.png "Params")
 
 ### All links you need
 * [Wiki: Getting Started](https://github.com/kjustynski/Lucy/wiki/Getting-Started)
