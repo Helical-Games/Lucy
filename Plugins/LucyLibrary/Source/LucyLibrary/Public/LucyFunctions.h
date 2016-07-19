@@ -27,6 +27,12 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
 	/**
+	* Returns the root widget of User Widget.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Widget", Meta = (DisplayName = "Get Root Widget"))
+	static UWidget* GetRootWidget(const class UUserWidget* UserWidget);
+
+	/**
 	* Sets the volume of a Sound Class.
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Sound Class", Meta = (DisplayName = "Set Volume"))
@@ -203,10 +209,4 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Set Window Mode", Keywords = "screen fullscreen windowed"))
 		static void SetWindowMode(const bool Fullscreen, const bool IsFullscreenWindowed);
-
-	/**
-	* Returns the root widget of User Widget.
-	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Widget", Meta = (DisplayName = "Get Panel Root"))
-		static UWidget* GetPanelRoot(const class UUserWidget* Panel);
 };

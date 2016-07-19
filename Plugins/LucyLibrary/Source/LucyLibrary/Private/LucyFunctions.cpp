@@ -7,6 +7,11 @@ ULucyFunctions::ULucyFunctions(const FObjectInitializer& ObjectInitializer)
 
 }
 
+UWidget* ULucyFunctions::GetRootWidget(const class UUserWidget* UserWidget)
+{
+	return UserWidget->GetRootWidget();
+}
+
 void ULucyFunctions::SoundClass_SetVolume(USoundClass* SoundClass, const float Volume)
 {
 	if (SoundClass == nullptr)
@@ -530,10 +535,5 @@ void ULucyFunctions::SetWindowMode(const bool Fullscreen, const bool IsFullscree
 	{
 		Window->SetWindowMode(EWindowMode::Type::Windowed);
 	}
-}
-
-UWidget* ULucyFunctions::GetPanelRoot(const class UUserWidget* Panel)
-{
-	return Panel->GetRootWidget();
 }
 
