@@ -29,6 +29,11 @@ public class LucyLibrary : ModuleRules
 			new string[]
 			{
 				"Core",
+                "CoreUObject",
+                "Engine",
+                "Slate",
+                "SlateCore",
+                "UMG",
 				
 				// ... add other public dependencies that you statically link with here ...
 			}
@@ -42,6 +47,7 @@ public class LucyLibrary : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "UMG",
 
 				// ... add private dependencies that you statically link with here ...	
 			}

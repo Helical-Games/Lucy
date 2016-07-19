@@ -1,8 +1,7 @@
-// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "Engine.h"
+#include "UserWidget.h"
 #include "LucyFunctions.generated.h"
 
 /* 
@@ -27,37 +26,34 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "LucyLibrary sample test testing"), Category = "LucyLibraryTesting")
-	static float LucyLibrarySampleFunction(float Param);
-
 	/**
 	* Sets the volume of a Sound Class.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Set Volume"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Sound Class", Meta = (DisplayName = "Set Volume"))
 		static void SoundClass_SetVolume(USoundClass* SoundClass, const float Volume);
 
 	/**
 	* Returns the volume of a Sound Class.
 	*/
-	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Get Volume"))
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Sound Class", Meta = (DisplayName = "Get Volume"))
 		static float SoundClass_GetVolume(USoundClass* SoundClass);
 
 	/**
 	* Sets the pitch of a Sound Class.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Set Pitch"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Sound Class", Meta = (DisplayName = "Set Pitch"))
 		static void SoundClass_SetPitch(USoundClass* SoundClass, const float Pitch);
 
 	/**
 	* Returns the pitch of a Sound Class.
 	*/
-	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Sound Class", Meta = (DisplayName = "Get Pitch"))
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Sound Class", Meta = (DisplayName = "Get Pitch"))
 		static float SoundClass_GetPitch(USoundClass* SoundClass);
 
 	/**
 	* Sets the mouse position.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Position"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Mouse", Meta = (DisplayName = "Set Mouse Position"))
 		static void SetMousePosition(const int32 X, const int32 Y);
 
 	/**
@@ -69,7 +65,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GameViewportClient's Viewport is null
 	*  - the mouse is outside of the viewport
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Get Mouse Position"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Mouse", Meta = (DisplayName = "Get Mouse Position"))
 		static void GetMousePosition(bool& Success, int32& X, int32& Y);
 
 	/**
@@ -78,7 +74,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	* X:  0.0 is left, 1.0 is right
 	* Y:  0.0 is top,  1.0 is bottom
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Position (Percentages)"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Mouse", Meta = (DisplayName = "Set Mouse Position (Percentages)"))
 		static void SetMousePositionInPercentages(const float X, const float Y);
 
 	/**
@@ -93,25 +89,25 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GameViewportClient's Viewport is null
 	*  - the mouse is outside of the viewport
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Get Mouse Position (Percentages)"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Mouse", Meta = (DisplayName = "Get Mouse Position (Percentages)"))
 		static void GetMousePositionInPercentages(bool& Success, float& X, float& Y);
 
 	/**
 	* Sets the mouse locked to the viewport (meaning the mouse cursor won't be able to get out of the viewport).
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Mouse", Meta = (DisplayName = "Set Mouse Locked To Viewport", Keywords = "cursor confined min max"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Mouse", Meta = (DisplayName = "Set Mouse Locked To Viewport", Keywords = "cursor confined min max"))
 		static void SetMouseLockedToViewport(const bool Locked);
 
 	/**
 	* Returns the primary monitor resolution.
 	*/
-	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Monitor", Meta = (DisplayName = "Get Primary Monitor Resolution", Keywords = "screen size desktop"))
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Monitor", Meta = (DisplayName = "Get Primary Monitor Resolution", Keywords = "screen size desktop"))
 		static void GetPrimaryMonitorResolution(int32& Width, int32& Height);
 
 	/**
 	* Returns the primary monitor work area, this is the area not covered by task bars or other docked widgets.
 	*/
-	UFUNCTION(BlueprintPure, Category = "Lucy Library|Utilities|Monitor", Meta = (DisplayName = "Get Primary Monitor Work Area", Keywords = "screen size desktop"))
+	UFUNCTION(BlueprintPure, Category = "Lucy Library|Monitor", Meta = (DisplayName = "Get Primary Monitor Work Area", Keywords = "screen size desktop"))
 		static void GetPrimaryMonitorWorkArea(int32& X, int32& Y, int32& Width, int32& Height);
 
 	/**
@@ -122,7 +118,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GEngine's GameViewportClient is null
 	*  - GameViewportClient's Window is null
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Bounds", Keywords = "size location position"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Get Window Bounds", Keywords = "size location position"))
 		static void GetWindowBounds(bool& Success, int32& X, int32& Y, int32& Width, int32& Height);
 
 	/**
@@ -133,7 +129,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GEngine's GameViewportClient is null
 	*  - GameViewportClient's Window is null
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Position"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Get Window Position"))
 		static void GetWindowPosition(bool& Success, int32& X, int32& Y);
 
 	/**
@@ -144,7 +140,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GEngine's GameViewportClient is null
 	*  - GameViewportClient's Window is null
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Size"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Get Window Size"))
 		static void GetWindowSize(bool& Success, int32& Width, int32& Height);
 
 	/**
@@ -157,19 +153,19 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GEngine's GameViewportClient is null
 	*  - GameViewportClient's Window is null
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Position (Percentages)"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Get Window Position (Percentages)"))
 		static void GetWindowPositiomInPercentagesCentered(bool& Success, float& X, float& Y);
 
 	/**
 	* Sets the window position in screen space.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Position"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Set Window Position"))
 		static void SetWindowPosition(const int32 X, const int32 Y);
 
 	/**
 	* Sets the window size in screen pixels.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Size"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Set Window Size"))
 		static void SetWindowSize(const int32 Width, const int32 Height);
 
 	/**
@@ -177,7 +173,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*
 	* This will take the window size in account, meaning that X=0.5 and Y=0.5 will cause the window to be centered in the primary screen work area.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Position (Percentages)"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Set Window Position (Percentages)"))
 		static void SetWindowPositiomInPercentagesCentered(const float X, const float Y);
 
 	/**
@@ -191,7 +187,7 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*  - GameViewportClient's Window is null
 	*  - The mode is pseudo-fullscreen (used for devices like HMDs)
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Get Window Mode", Keywords = "screen fullscreen windowed"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Get Window Mode", Keywords = "screen fullscreen windowed"))
 		static void GetWindowMode(bool& Success, bool& Fullscreen, bool& IsFullscreenWindowed);
 
 	/**
@@ -205,6 +201,12 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	*
 	* Fullscreen and Windowed can both be true.
 	*/
-	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Utilities|Window", Meta = (DisplayName = "Set Window Mode", Keywords = "screen fullscreen windowed"))
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Window", Meta = (DisplayName = "Set Window Mode", Keywords = "screen fullscreen windowed"))
 		static void SetWindowMode(const bool Fullscreen, const bool IsFullscreenWindowed);
+
+	/**
+	* Returns the root widget of User Widget.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Widget", Meta = (DisplayName = "Get Panel Root"))
+		static UWidget* GetPanelRoot(const class UUserWidget* Panel);
 };
