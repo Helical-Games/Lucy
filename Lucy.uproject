@@ -3,14 +3,10 @@
 	"EngineAssociation": "4.12",
 	"Category": "",
 	"Description": "",
-	"Modules": [
+	"Plugins": [
 		{
-			"Name": "Lucy",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
-		}
+			"Name": "LucyLibrary",
+			"Enabled": true
+		},
 	]
 }
