@@ -12,6 +12,11 @@ UWidget* ULucyFunctions::GetRootWidget(const class UUserWidget* UserWidget)
 	return UserWidget->GetRootWidget();
 }
 
+UPanelWidget* ULucyFunctions::GetAsPanelWidget(const class UWidget* Widget)
+{
+	return (UPanelWidget*)Widget;
+}
+
 void ULucyFunctions::SoundClass_SetVolume(USoundClass* SoundClass, const float Volume)
 {
 	if (SoundClass == nullptr)

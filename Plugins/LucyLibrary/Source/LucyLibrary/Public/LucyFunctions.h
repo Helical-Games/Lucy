@@ -30,7 +30,13 @@ class ULucyFunctions : public UBlueprintFunctionLibrary
 	* Returns the root widget of User Widget.
 	*/
 	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Widget", Meta = (DisplayName = "Get Root Widget"))
-	static UWidget* GetRootWidget(const class UUserWidget* UserWidget);
+		static UWidget* GetRootWidget(const class UUserWidget* UserWidget);
+
+	/**
+	* Casts Widget to Panel Widget.
+	*/
+	UFUNCTION(BlueprintCallable, Category = "Lucy Library|Widget", Meta = (DisplayName = "Get As Panel Widget"))
+		static UPanelWidget* GetAsPanelWidget(const class UWidget* Widget);
 
 	/**
 	* Sets the volume of a Sound Class.
