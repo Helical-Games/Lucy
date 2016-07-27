@@ -7,16 +7,6 @@ ULucyFunctions::ULucyFunctions(const FObjectInitializer& ObjectInitializer)
 
 }
 
-UWidget* ULucyFunctions::GetRootWidget(const class UUserWidget* UserWidget)
-{
-	return UserWidget->GetRootWidget();
-}
-
-UPanelWidget* ULucyFunctions::GetAsPanelWidget(const class UWidget* Widget)
-{
-	return (UPanelWidget*)Widget;
-}
-
 void ULucyFunctions::SoundClass_SetVolume(USoundClass* SoundClass, const float Volume)
 {
 	if (SoundClass == nullptr)
@@ -540,5 +530,21 @@ void ULucyFunctions::SetWindowMode(const bool Fullscreen, const bool IsFullscree
 	{
 		Window->SetWindowMode(EWindowMode::Type::Windowed);
 	}
+}
+
+UWidget* ULucyFunctions::GetRootWidget(const class UUserWidget* UserWidget)
+{
+	return UserWidget->GetRootWidget();
+}
+
+UPanelWidget* ULucyFunctions::GetAsPanelWidget(const class UWidget* Widget)
+{
+	return (UPanelWidget*)Widget;
+}
+
+void ULucyFunctions::GetTextSize(const FString& Text, const FSlateFontInfo& FontInfo, FVector2D& Size)
+{
+	TSharedRef<FSlateFontMeasure> FontMeasure = FSlateApplication::Get().GetRenderer()->GetFontMeasureService();
+	Size = FontMeasure->Measure(Text, FontInfo, 1.0);
 }
 
