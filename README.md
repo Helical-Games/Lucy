@@ -1,5 +1,5 @@
 Lucy is lightweight UI & Input framework for projects created in Unreal Engine 4. 
-* Based on UMG, blueprint only. It's free to use, even commercially.
+* Based on UMG, written mostly in blueprints. It's free to use, even commercially.
 * It takes different approach on compositing user interfaces in UE4. In clean UMG (without any own scripts) you have to script every element (like button, text or slider) individually. It means lots of copy-pasting scripts responsible for input, localization, styling, setting and restoring state. Everything. Of course many developers close part of those scripts in reusable functions and apply them at every element. My approach is to close entire functionality of element or element group in separate widget file, then simply put this widget in UI panel and fill up parameters. Element added in UMG's Designer tab works out of the box. 
 * And I added to it easy way to manage UI panels and input (not only UI related) in game :)
 
