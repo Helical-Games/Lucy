@@ -17,7 +17,7 @@ This is entire script for Pause Menu, as simple as it always should be.
 
 ![Alt](http://i.imgur.com/Y0VAygC.png "Pause Menu")
 
-You don't need to produce spaghetti blueprint for every Text or Slider element. Prepare it quickly by setting params.
+You don't need to produce spaghetti blueprint for every UI element. Prepare it quickly by setting params.
 
 ![ALT](http://i.imgur.com/2e31OQV.png "Params")
 
