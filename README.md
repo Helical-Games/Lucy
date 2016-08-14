@@ -21,10 +21,13 @@ You don't need to produce spaghetti blueprint for every UI element. Prepare it q
 * Input Manager provides basic functionalities: setting various inputs for single action, activating interactions, detecting input device and automatically updating displayed icon and key of interaction.
 * You don't have to reinvent the wheel when you're starting work on UI. I already did it. Partially ;)
 
-### All links you need
+### All the links
 * [Wiki: Getting Started](https://github.com/kjustynski/Lucy/wiki/Getting-Started)
 * [Trello Board](https://trello.com/b/p4HZ0RuB/lucy)
 * [Twitter](https://twitter.com/kjustynski)
+
+### Donate if you like it :)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LDSUHMU28QRRL)
 
 ### Third-party 
 * Few blueprint functions from [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
