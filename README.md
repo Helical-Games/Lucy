@@ -20,7 +20,7 @@ You don't need to produce spaghetti blueprint for every UI element. Prepare it q
 * Samples of Main/Options menus simplifies creating your own menus, i.e. Video Menu allows you to set common graphics options. Just customize it to your needs. Or just download it, don't change a thing and enjoy basic menus working in your cooked build.
 * Input Manager provides basic functionalities: setting various inputs for single action, activating interactions, detecting input device and automatically updating displayed icon and key of interaction.
 * You don't have to reinvent the wheel when you're starting work on UI. I already did it. Partially ;)
-* 
+
 ### All links you need
 * [Wiki: Getting Started](https://github.com/kjustynski/Lucy/wiki/Getting-Started)
 * [Trello Board](https://trello.com/b/p4HZ0RuB/lucy)
