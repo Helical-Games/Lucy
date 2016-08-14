@@ -27,7 +27,7 @@ You don't need to produce spaghetti blueprint for every UI element. Prepare it q
 * [Twitter](https://twitter.com/kjustynski)
 
 ### Donate if you like it :)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LDSUHMU28QRRL)
+[![Donate](https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LDSUHMU28QRRL)
 
 ### Third-party 
 * Few blueprint functions from [LE Extended Standard Library](https://www.unrealengine.com/marketplace/low-entry-extended-standard-library)
